@@ -30,6 +30,8 @@
 #              LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #              SOFTWARE.
+#
+# Version:     Python 2.7
 #-----------------------------------------------------------------------------------------------
 
 from datetime import datetime, timedelta
@@ -72,7 +74,6 @@ def read_email(gmail_user, gmail_pwd):
         listOfLinks = []
 
         for id in message_ids[0].split():
-
             count+=1
             status, data = conn.fetch(id, '(RFC822)')
             email_msg = email.message_from_string(data[0][1])
