@@ -28,8 +28,6 @@ cd DaftAutomator
 pip install selenium
 ```
 
-3. Log in to Daft.ie and set up email alerts for your particular search query.
-
-[Email alert setup](https://www.daft.ie/emailalerts.daft)
+3. Log in to Daft.ie and [set up email alerts](https://www.daft.ie/emailalerts.daft) for your particular search query.
 
 4. 
