@@ -17,19 +17,19 @@ You can create an AWS account [here](https://aws.amazon.com).
 
 ### Setup
 
-*1 Clone the project
+1. Clone the project
 ```
 git clone https://github.com/maguid28/DaftAutomator.git DaftAutomator
 cd DaftAutomator
 ```
 
-*2 Make sure the dependencies are installed
+2. Make sure the dependencies are installed
 ```
 pip install selenium
 ```
 
-*3 Log in to Daft.ie and set up email alerts for your particular search query.
+3. Log in to Daft.ie and set up email alerts for your particular search query.
 
 [Email alert setup](https://www.daft.ie/emailalerts.daft)
 
-
+4. 
