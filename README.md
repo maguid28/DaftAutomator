@@ -13,12 +13,19 @@ A Gmail account and a Daft.ie account will be needed for this software to work c
 
 I would also recommend running this on an Amazon EC2 instance for high availabliity.
 
-You can create an AWS account [here](https://aws.amazon.com)
+You can create an AWS account [here](https://aws.amazon.com).
 
-### Installing
+### Setup
 
-
+Clone the project
 ```
-eee
+git clone https://github.com/maguid28/DaftAutomator.git DaftAutomator
+cd DaftAutomator
 ```
+
+Make sure the dependencies are installed
+```
+pip install selenium
+```
+
 
