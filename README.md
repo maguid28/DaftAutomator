@@ -31,6 +31,7 @@ pip install selenium
 3. Log in to Daft.ie and [set up email alerts](https://www.daft.ie/emailalerts.daft) for your particular search query.
 
 4. Run DaftAutomator.py
+
 Unix
 ```
 python path/to/DaftAutomator.py
