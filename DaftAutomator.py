@@ -34,11 +34,11 @@
 # Version:     Python 2.7
 #-----------------------------------------------------------------------------------------------
 
-from datetime import datetime, timedelta
 import imaplib
 import email
 import time
 from selenium import webdriver
+import datetime
 
 #Read emails from last 3 days
 no_days_query = 3
@@ -66,7 +66,6 @@ def read_email(gmail_user, gmail_pwd):
     status, select_info = conn.select(folder_to_search)
 
     if status == 'OK':
-        today = datetime.today()
         #status, message_ids = conn.search(None, 'X-GM-RAW', search_key)
         status, message_ids = conn.search(None, 'from', '"noreply@daft.ie"')
         count = 0
@@ -137,7 +136,6 @@ def findLink(text_list):
 def automator(url, name, email, phone, message):
     driver = webdriver.Chrome()  # Optional argument, if not specified will search path.
     driver.set_page_load_timeout(30)
-    print url
     driver.get(url)
     driver.maximize_window()
     driver.implicitly_wait(20)
@@ -175,8 +173,10 @@ def main():
 
         for links in range(len(list)):
             print "link: ",list[links]
-            automator(str(list[links]), name, email, phone_number, message)
+            automator(str(list[links]), name, gmail_user, phone_number, message)
         #sleep for 30 mins before checking again
+        nextruntime =  datetime.datetime.now() + datetime.timedelta(minutes=30)
+        print("Checking again at %s:%s" % (nextruntime.hour, nextruntime.minute))
         time.sleep(1800)
 
 
